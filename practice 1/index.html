@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--    <p id="one">HELLO DOSTHO</p>
+    <button onclick="change()">CHANGE</button> -->
+
+    <input id="number1">
+    <input id="number2">
+    <button onclick="printresult()">ADD</button>
+    <p id="result">result</p>
+</body>
+   <!--  <script>
+        // selecting and changing the context in html using  js
+
+        var p1=document.getElementById("one")
+        console.log(p1.textContent)
+         
+        function change(){
+            p1.textContent="BYE DOSTHO!!"
+        }
+    </script> -->
+
+    <script>
+        var box1=document.getElementById("number1")
+        var box2=document.getElementById("number2")
+
+        var result = document.getElementById("result")
+        function printresult(){
+            var box1value=Number(box1.value)
+            var box2value=Number(box2.value)
+
+            var total=box1value+box2value
+
+            result.textContent=total
+        }
+    </script>
+     
+</html>
