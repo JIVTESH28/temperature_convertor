@@ -1,29 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Convertor</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-     
-    <form >
-        <h1>Temperature Convertor</h1>
-        <p>Enter the Temperature: </p>
-        <input type="number"  id="textbox" value="0"><br>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+     background: linear-gradient(to bottom,hwb(182 6% 9%), hwb(240 60% 5%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 
-        <p>Select the conversion type:</p>
-        <input type="radio" name="unit" id="toFarenheit">
-        <label for="toFarenheit">Celicus ➡ Farenheit</label><br><br>
+}
+/* body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(hwb(182 6% 9%), hwb(253 60% 5%)); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+ */
 
-        <input type="radio" id="toCelcius" name="unit" >
-        <label for="toCelcius">Farenheit ➡ Celicus</label><br>
+h1{
+    color: hsl(223, 100%, 67%);
 
-        <button type="button" id="btn">Submit</button>
-        <p id="result"> </p>
-    </form>
+}
 
-    <script src="TempConvert.js"></script>
-</body>
-</html>
+form{
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* transition: transform 0.5s ease, box-shadow 0.5s ease; */
+    margin-bottom: 20px;
+    min-height: 220px;
+    opacity: 1;
+}
+
+
+
+#textbox{
+    width: 60%;
+    text-align: center;
+    font-size: 2em;
+    border: 2px solid hsla(0, 0% ,0%,0.8);
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+
+label{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+p{
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+
+button {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+    background-color: hsl(0, 100%, 60%);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px hsl(0, 100%, 45%, 0.5);
+    transition: box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: hsl(0, 98%, 38%);
+    transition: background-color 0.3s;
+}
+
+button:active {
+    box-shadow: 2px 2px 8px hsl(0, 100%, 45%, 0.5);
+    transform: translate(0px, 3px);
+}
